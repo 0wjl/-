@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+	int i,n,k,x;
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&k);
+		if(k==0)
+		{
+			printf("0\n");
+		}
+		else
+		{
+			x=2*(k+1);
+			if(k%2==0)
+			{
+				x=k+1;
+				k=k/2;
+				printf("%d/%d\n",k,x);
+			}
+			else
+			{
+				printf("%d/%d\n",k,x);
+			}
+		}
+	}
+	return 0;
+}
+思路：计算出在x轴上x关于k的表达式，高为定值1，计算出面积S的表达式。利用for循环和if判断完成。
+问题；一开始没有理清思路，导致约分过于复杂，浪费时间。
+
